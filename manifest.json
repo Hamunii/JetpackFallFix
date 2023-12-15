@@ -1,0 +1,7 @@
+{
+    "name": "JetpackFallFix",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/Hamunii/JetpackFallFix",
+    "description": "Fixes buggy jetpack fall damage logic, utilizing slight but necessary creative freedom.",
+    "dependencies": []
+}
