@@ -9,6 +9,7 @@ This mod fixes buggy jetpack fall damage logic, utilizing slight but necessary c
 - Fall damage not applying when landing, but after a jump
 - Fall damage from previous high flight speed when taking off
 - Fall damage when taking off from the ship at the start of a game
+- Fall damage when using the jetpack for the first time while moving fast enough
 
 This is a client side mod, so everyone who wants these fixes needs to install this mod.
 
