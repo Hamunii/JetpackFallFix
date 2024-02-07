@@ -1,3 +1,8 @@
+## 2.0.0
+
+- Rewrote the whole plugin so it uses transpilers for much better compatibility with other mods
+    - Also now uses MonoMod instead of Harmony
+
 ## 1.1.0
 
 - Updated fall damage values for v49

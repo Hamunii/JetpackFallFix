@@ -1,6 +1,6 @@
 # Jetpack Fall Fix
 
-This mod fixes buggy jetpack fall damage logic, utilizing slight but necessary creative freedom.
+This mod fixes buggy jetpack fall damage logic.
 
 ### List of Fixes
 
