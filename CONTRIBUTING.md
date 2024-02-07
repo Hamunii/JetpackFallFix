@@ -7,4 +7,4 @@ To build the project, you need to place the following dll files into the dlls di
 
 These can be found in the `Lethal Company/Lethal Company_Data/Managed/` directory.
 
-The project should now build successfully, and your shiny new dll file can be found in `bin/Release/netstandard2.1/`
+The project should now build successfully.
