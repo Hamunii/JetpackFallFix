@@ -61,7 +61,7 @@ namespace JetpackFallFix {
                 .Where(x => x.Name == "CheckSphere")
                 .FirstOrDefault()
             );
-            LogIfDebugBuild(il.ToString());
+            // LogIfDebugBuild(il.ToString());
         }
 
         private static void On_PlayerControllerB_PlayerHitGroundEffects(On.GameNetcodeStuff.PlayerControllerB.orig_PlayerHitGroundEffects orig, PlayerControllerB self)
@@ -113,8 +113,13 @@ namespace JetpackFallFix {
             // above checks get replaced with this method
             c.EmitDelegate<Func<PlayerControllerB, bool>>((self) =>
             {
-                if(!(self.jetpackControls || self.disablingJetpackControls) || self.thisController.velocity.y < -15f){
-                    LogIfDebugBuild("Take fall damage!");
+                if(!(self.jetpackControls || self.disablingJetpackControls)){
+                    LogIfDebugBuild("Take normal fall damage.");
+                    return false;
+                }
+                // Where does -15f come from? Nowhere. It just seems like a decent number.
+                if(self.thisController.velocity.y < -15f){
+                    LogIfDebugBuild("Take fall damage with jetpack.");
                     // fallValueUncapped gets set to -8f when jetpack is used, so we do this.
                     self.fallValueUncapped = self.thisController.velocity.y;
                     // Also, fallValueUncapped gets reset back to -7 when we are on ground, in Update().
@@ -125,6 +130,7 @@ namespace JetpackFallFix {
                 self.takingFallDamage = false;
                 return true;
             });
+            // LogIfDebugBuild(il.ToString());
         }
     }
 }

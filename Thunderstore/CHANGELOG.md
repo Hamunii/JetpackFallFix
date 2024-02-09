@@ -1,3 +1,7 @@
+## 2.0.1
+
+- Fix always overriding `fallValueUncapped` with `thisController.velocity.y` even when not using jetpack.
+
 ## 2.0.0
 
 - Rewrote the whole plugin so it uses transpilers for much better compatibility with other mods
